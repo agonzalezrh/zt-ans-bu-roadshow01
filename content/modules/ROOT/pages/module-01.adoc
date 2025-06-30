@@ -2,6 +2,8 @@
 :toc:
 :toc-placement: auto
 
+TEST: {dns_domain}
+
 == Welcome to the Team!
 
 Congratulations on joining the team! This lab will introduce you to automation using Ansible Automation Platform. We'll start with read-only tasks that are safe to automate, helping you build confidence before moving to more complex automation scenarios.

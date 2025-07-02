@@ -1,6 +1,35 @@
 ---
 # Containers are under development
 containers:
+  - name: code-server
+    image: codercom/code-server:latest
+    ports:
+      - name: code-server
+        containerPort: 8080
+        protocol: TCP
+    volumeMounts:
+      - name: code-storage
+        mountPath: /home/coder/project
+    volumes:
+      - name: code-storage
+        emptyDir: {}
+    memory: 2Gi
+    environment:
+      PASSWORD: ""
+    services:
+      - name: code-server
+        ports:
+          - port: 8080
+            protocol: TCP
+            targetPort: 8080
+            name: code-server
+    routes:
+      - name: code-server
+        host: code-server
+        service: code-server
+        targetPort: 8080
+        tls: true
+        tls_termination: Edge
   - name: gitea
     image: gitea/gitea:1.16.8-rootless
     ports:

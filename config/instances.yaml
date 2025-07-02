@@ -32,6 +32,8 @@ containers:
         targetPort: 8080
         tls: true
         tls_termination: Edge
+    commands:
+      - git clone http://gitea:gitea@gitea:3000/student/aap25-roadshow-content.git /home/coder/project
   - name: gitea
     image: gitea/gitea:1.16.8-rootless
     ports:

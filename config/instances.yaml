@@ -17,7 +17,7 @@ containers:
         emptyDir: {}
     memory: 2Gi
     environment:
-      PASSWORD: ""
+      HOME: "/home/coder"
     services:
       - name: code-server
         ports:

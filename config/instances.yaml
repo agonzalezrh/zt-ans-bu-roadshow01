@@ -11,7 +11,7 @@ containers:
         protocol: TCP
     volumeMounts:
       - name: code-storage
-        mountPath: /home/coder/project
+        mountPath: /home/coder/
     volumes:
       - name: code-storage
         emptyDir: {}

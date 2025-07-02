@@ -97,6 +97,8 @@ containers:
         tls_termination: Edge
     commands:
       - git clone http://gitea:gitea@gitea:3000/student/aap25-roadshow-content.git /home/coder/project
+      - git config --global user.name codeserver
+      - git config --global user.email code@server.com
 virtualmachines:
   - name: "control"
     image: "aap-25-c-20250611"

@@ -4,7 +4,7 @@ containers:
   - name: code-server
     image: codercom/code-server:latest
     command: [ "code-server" ]
-    args: [ "--auth", "none", "--bind-addr", "0.0.0.0:8080", "/home/coder/project" ]
+    args: [ "--auth", "none", "--user-data-dir", "/home/coder/.local/share/code-server", "--extensions-dir", "/home/coder/.local/share/code-server/extensions", "--bind-addr", "0.0.0.0:8080", "/home/coder/project" ]
     ports:
       - name: code-server
         containerPort: 8080

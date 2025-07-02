@@ -3,6 +3,8 @@
 containers:
   - name: code-server
     image: codercom/code-server:latest
+    command: [ "code-server" ]
+    args: [ "--auth", "none", "--bind-addr", "0.0.0.0:8080", "/home/coder/project" ]
     ports:
       - name: code-server
         containerPort: 8080

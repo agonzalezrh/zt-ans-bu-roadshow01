@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo ${SECRET1} > /tmp/secret1
+echo ${SECRET2} > /tmp/secret2
 
 # Install collection(s)
 ansible-galaxy collection install ansible.eda

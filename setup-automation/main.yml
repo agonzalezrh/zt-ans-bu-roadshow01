@@ -57,6 +57,9 @@
       dest: "/tmp/setup-scripts/setup-{{ ansible_host }}.sh"
     register: r_result
 
+  - name: Include secrets var
+    include_vars: ../configs/secrets.yaml
+
   - name: Execute setup-node.sh if it exists
     when: r_script_test.stat.exists
     shell: "sh -x /tmp/setup-scripts/setup-{{ ansible_host }}.sh > /tmp/setup-scripts/setup-{{ ansible_host }}.log 2>&1"
@@ -66,6 +69,8 @@
       SATELLITE_URL: "{{ satellite_url }}"
       SATELLITE_ORG: "{{ satellite_org }}"
       SATELLITE_ACTIVATIONKEY: "{{ satellite_activationkey }}"
+      SECRET1: "{{ secret1 }}"
+      SECRET2: "{{ secret2 }}"
 
   - name: Output script result
     ansible.builtin.debug:

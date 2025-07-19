@@ -58,7 +58,7 @@
     register: r_result
 
   - name: Include secrets var
-    include_vars: ../configs/secrets.yaml
+    include_vars: ../config/secrets.yaml
 
   - name: Execute setup-node.sh if it exists
     when: r_script_test.stat.exists

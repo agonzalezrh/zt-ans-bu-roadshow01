@@ -32,6 +32,9 @@ tabs:
   - name: Windows UI
     url: https://windows-${guid}.${domain}/
     external: false
+  - name: code
+    url: https://code-server-${guid}.${domain}/
+    external: true
   # - name: ">_ control"
   #   url: /wetty
   # - name: ">_ node01"

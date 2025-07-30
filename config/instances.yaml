@@ -101,7 +101,7 @@ containers:
       - git config --global user.email code@server.com
 virtualmachines:
   - name: "control"
-    image: "aap-25-c-20250611"
+    image: "aap-25-ceh-20250728"
     memory: "16G"
     cores: 4
     image_size: "30Gi"

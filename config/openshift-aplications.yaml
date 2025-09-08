@@ -1,0 +1,5 @@
+- name: webapp
+  directory: helm/webapp
+
+- name: database
+  directory: helm/database

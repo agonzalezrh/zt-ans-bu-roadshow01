@@ -1,3 +1,1 @@
-version: 4.18 (optional)
 argocd: true
-gpu: false

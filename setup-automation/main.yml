@@ -23,6 +23,7 @@
       - node01
       - node02
       - node03
+      - control
 - name: Demo Playbook for the ansible-runner API
   hosts: all:!localhost
   gather_facts: false
